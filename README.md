@@ -12,6 +12,7 @@ chmod +x cli.js
 ```
 
 ## Link the command name to bin
+Enables to run the command `mumin [query]` from the directory
 ```
 npm link
 ```
