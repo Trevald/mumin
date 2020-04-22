@@ -1,6 +1,9 @@
 # mumin
 Suomlainen 101 - Compact Finnish dictionary in the terminal
 
+## Install global for convenience
+`npm i -g mumin`
+
 ## Usage
 Running `mumin morning` will output:
 ```
