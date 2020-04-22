@@ -1,0 +1,14 @@
+{
+  "name": "mumin",
+  "version": "1.0.0",
+  "description": "Suomalainen 101",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@trevald",
+  "license": "ISC",
+  "bin": {
+    "mumin": "./cli.js"
+  }
+}
