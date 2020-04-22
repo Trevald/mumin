@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 
 // Load dictionary
-const fs = require('fs');
-const rawdata = fs.readFileSync('./dictionary-fi.json');
-const dictionary = JSON.parse(rawdata);
+const dictionary = loadDictionary("./dictionary-fi.json");
+
+function loadDictionary(file) {
+    const fs = require('fs');
+    const rawdata = fs.readFileSync(file);
+    return JSON.parse(rawdata);
+}
 
 function main() {
-    // console.log(`Main: ${args.length}`);
     if (args.length === 0) {
         printPhrases(dictionary);
     } else {
@@ -14,11 +17,13 @@ function main() {
     }
 }
 
-// console.log(`Hello ${args.length}`);
-
 function printOne(query) {
     const phrases = dictionary.filter(item => {
-        return item.en.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+        if (query.length === 1) {
+            return item.en.toLowerCase().charAt(0) == query.toLowerCase();
+        } else {
+            return item.en.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+        }
     });
 
     if (phrases.length === 0) {
