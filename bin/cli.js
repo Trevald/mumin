@@ -1,13 +1,8 @@
 #!/usr/bin/env node
+"use strict";
 
 // Load dictionary
-const dictionary = loadDictionary("./dictionary-fi.json");
-
-function loadDictionary(file) {
-    const fs = require('fs');
-    const rawdata = fs.readFileSync(file);
-    return JSON.parse(rawdata);
-}
+const dictionary = require("./dictionary-fi.json");
 
 function main() {
     if (args.length === 0) {
@@ -39,7 +34,6 @@ function printMissing(query) {
 
 function printPhrases(phrases) {
     const requiredLength = getMaxLengthOfPhrase(phrases);
-    console.log("length", requiredLength);
     phrases.forEach(phrase => {
        phrase.en = addSpaces(phrase.en, requiredLength + 5)
     });
@@ -67,14 +61,11 @@ function getMaxLengthOfPhrase(phrases) {
 
 function addSpaces(string, length) {
     while(string.length < length) {
-        console.log("add space");
         string = string + " ";
     }
 
     return string;
 }
-
-
 
 
 // Start provided args

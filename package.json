@@ -1,6 +1,6 @@
 {
   "name": "mumin",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "Suomalainen 101",
   "repository": {
     "type": "git",
@@ -13,6 +13,6 @@
   "author": "@trevald",
   "license": "ISC",
   "bin": {
-    "mumin": "./cli.js"
+    "mumin": "./bin/cli.js"
   }
 }
