@@ -1,22 +1,5 @@
 # mumin
-Suomlainen 101
-
-## Project setup
-```
-npm install
-```
-
-## Make Mumin executable
-```
-chmod +x cli.js
-```
-
-## Link the command name to bin
-Enables to run the command `mumin [query]` from the directory
-```
-npm link
-```
-*Note this command might be required to be run by root*
+Suomlainen 101 - Compact Finnish dictionary in the terminal
 
 ## Usage
 In example running `mumin morning` will output
